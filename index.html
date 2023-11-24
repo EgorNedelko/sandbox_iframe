@@ -16,7 +16,7 @@
    </div>
 
    <div>
-      <button style="margin-top: 40px;" onclick="triggerPrompt()" id="jsPrompt">Please confirm the action</button>
+      <button style="margin-top: 40px;" onclick="triggerPrompt()" id="jsPrompt">Please enter your name</button>
       <div style="margin-top: 20px;" id="promptText"></div>
    </div>
    
@@ -38,6 +38,7 @@
          document.getElementById("confirmationText").innerHTML = confirmTxt
       }
 
+      //Prompt fnc
       function triggerPrompt() {
          let txt
          let person = prompt("Please enter your name:", "Harry Potter")
