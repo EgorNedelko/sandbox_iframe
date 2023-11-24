@@ -6,6 +6,48 @@
    <title>JSpopUps</title>
 </head>
 <body>
-   <p>Hello world!</p>
+   <div>
+      <button style="margin-top: 20px;" onclick="triggerAlert()" id="jsAlert">ALERT!</button>
+   </div>
+   
+   <div>
+      <button style="margin-top: 40px;" onclick="triggerConfirm()" id="jsConfirm">Please confirm the action</button>
+      <div style="margin-top: 20px;" id="confirmationText">Confirmation message</div>
+   </div>
+
+   <div>
+      <button style="margin-top: 40px;" onclick="triggerPrompt()" id="jsPrompt">Please confirm the action</button>
+      <div style="margin-top: 20px;" id="promptText"></div>
+   </div>
+   
+   <script>
+
+      //Alert fnc
+      function triggerAlert() {
+         alert("This is an alert message!")
+      }
+
+      //Confirm fnc
+      function triggerConfirm() {       
+         let confirmTxt
+         if (confirm("Press a button!")) {
+            confirmTxt = "You pressed OK!"
+         } else {
+            confirmTxt = "You pressed Cancel!"
+         }
+         document.getElementById("confirmationText").innerHTML = confirmTxt
+      }
+
+      function triggerPrompt() {
+         let txt
+         let person = prompt("Please enter your name:", "Harry Potter")
+         if (person == null || person == "") {
+            text = "User cancelled the prompt."
+         } else {
+            text = "Hello " + person + "! How are you today?"
+         }
+         document.getElementById("promptText").innerHTML = text
+      }
+   </script>
 </body>
 </html>
