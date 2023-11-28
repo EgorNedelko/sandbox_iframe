@@ -30,7 +30,7 @@
       //Confirm fnc
       function triggerConfirm() {       
          let confirmTxt
-         if (confirm("Press a button!")) {
+         if (confirm("Confirm the action!")) {
             confirmTxt = "You pressed OK!"
          } else {
             confirmTxt = "You pressed Cancel!"
@@ -41,11 +41,11 @@
       //Prompt fnc
       function triggerPrompt() {
          let txt
-         let person = prompt("Please enter your name:", "Harry Potter")
+         let person = prompt("2 + 2 =", "4")
          if (person == null || person == "") {
             text = "User cancelled the prompt."
          } else {
-            text = "Hello " + person + "! How are you today?"
+            text = "Correct! The answer is 4"
          }
          document.getElementById("promptText").innerHTML = text
       }
